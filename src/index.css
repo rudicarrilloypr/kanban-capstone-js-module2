@@ -13,44 +13,51 @@ body {
 }
 
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content:  center;
-    width: 90vw;
- 
-    padding: 0 1vw;
-    position: fixed;
-    background-color: #fff;
-    height: 7.5vw;
-    top: 0;
-  }
-  
-  .navbar .logo img {
-    height: 6vw; 
-  }
-  
-  .navbar nav ul {
-    display: flex;
-    list-style: none;
-  }
-  
-  .navbar nav ul li {
-    margin: 0 1vw;
-  }
-  
-  .navbar nav ul li a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  .navbar nav ul li a:hover {
-    color: rgb(36, 94, 180);
-  }
-  
-  .navbar nav ul li a.active {
-    color: rgb(36, 94, 180);
-  }
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90vw;
+  padding: 0 1vw;
+  position: fixed;
+  background-color: #fff;
+  height: 7.5vw;
+  top: 0;
+}
+
+.navbar .logo img {
+  height: 6vw;
+}
+
+.navbar nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar nav ul li {
+  margin: 0 1vw;
+}
+
+.navbar nav ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.lists a:hover {
+  color: rgb(36, 94, 180);
+}
+
+.lists a.active {
+  color: rgb(36, 94, 180);
+}
+
+.navbar nav ul li a:hover {
+  color: rgb(36, 94, 180);
+}
+
+.navbar nav ul li a.active {
+  color: rgb(36, 94, 180);
+}
+
 .header {
   height: 6vw;
   display: flex;
@@ -65,24 +72,15 @@ footer {
   padding: 0 1vw;
 }
 
-.lists a:hover {
-  color: rgb(36, 94, 180);
-}
-
-.lists a.active {
-  color: rgb(36, 94, 180);
-}
-
 .footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 90vw;
-    border: black solid 0.5vw;
-    padding: 0 1vw;
-    position: fixed;
-    background-color: #fff;
-    height: 5vw;
-    bottom: 0;
-  }
-  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90vw;
+  border: black solid 0.5vw;
+  padding: 0 1vw;
+  position: fixed;
+  background-color: #fff;
+  height: 5vw;
+  bottom: 0;
+}
