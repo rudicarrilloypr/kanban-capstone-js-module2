@@ -58,6 +58,15 @@ body {
   color: rgb(36, 94, 180);
 }
 
+.logo {
+  background-image: url('./assets/logo/pokemon-logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 6vw;
+  height: 6vw;
+  background-position: center;
+}
+
 .header {
   height: 6vw;
   display: flex;
