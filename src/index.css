@@ -29,6 +29,10 @@ body {
   max-width: 100%;
 }
 
+.comment-pop-up div img {
+  width: 35vw;
+}
+
 .navbar .logo img {
   height: 6vw;
 }
@@ -36,6 +40,14 @@ body {
 .navbar nav ul {
   display: flex;
   list-style: none;
+}
+
+.comment-pop-up li {
+  list-style: none;
+}
+
+.comment-pop-up-details ul li {
+  width: 40%;
 }
 
 .navbar nav ul li {
@@ -102,7 +114,7 @@ footer {
 
 /* ---------- POKEMON LIST ---------- */
 
-#pokemon-list {
+.pokemon-list {
   display: flex;
   margin-top: 5vw;
   margin-bottom: 5vw;
@@ -142,4 +154,121 @@ footer {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+}
+
+/* ---------- COMMENTS POP UP ---------- */
+
+span {
+  font-weight: 900;
+}
+
+.comment-pop-up {
+  width: 80%;
+  margin: 1vh auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1vh 3vw;
+  align-items: center;
+  border: 0.3rem solid black;
+  border-radius: 0.9rem;
+}
+
+.comment-pop-up > * {
+  box-sizing: border-box;
+}
+
+.x-button {
+  align-self: flex-end;
+  font-weight: 900;
+  background: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.pop-up-buttons:hover {
+  background-color: black;
+  color: white;
+  padding-right: 1rem;
+  padding-left: 0.5rem;
+}
+
+.pop-up-buttons::after {
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.pop-up-buttons:hover::after {
+  opacity: 1;
+  right: 0.5rem;
+}
+
+.pop-up-buttons:focus {
+  color: red;
+}
+
+.comment-pop-up h2 {
+  font-size: 5vw;
+  margin: 0.5rem;
+}
+
+.comment-pop-up h3 {
+  font-size: 4vh;
+  margin: 0 auto;
+}
+
+.comment-pop-up-details ul:nth-child(1) {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#abilities-list li,
+#stats-list li,
+#forms-list li,
+#weight-list li {
+  font-size: 0.7rem;
+  width: fit-content;
+}
+
+.comment-pop-up-comments-number-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#commentCount {
+  font-size: inherit;
+}
+
+.comment-pop-up_form_container h3 {
+  text-align: center;
+}
+
+.comment-pop-up_form_container form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.3vh;
+}
+
+.comment-pop-up_form_container form input,
+.comment-pop-up_form_container form textarea {
+  border: 0.2rem solid black;
+  border-radius: 0.3rem;
+}
+
+.comment-pop-up_form_container form input:hover,
+.comment-pop-up_form_container form textarea:hover {
+  border: 0.2rem solid #2b2828;
+  border-radius: 0.3rem;
+  background: #f9f7f7;
+}
+
+.comment-pop-up_form_container form button {
+  width: fit-content;
+  padding: 0.2rem 0.5rem;
+}
+
+.hidden {
+  display: none;
 }

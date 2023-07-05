@@ -10,9 +10,27 @@
 
 # 📗 Table of Contents
 
+- [� Table of Contents](#-table-of-contents)
+- [📖  Pokemon App ](#--pokemon-app-)
+  - [🛠 Built With ](#-built-with-)
+   - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [💻 Getting Started ](#-getting-started-)
+   - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+    - [Run tests](#run-tests)
+    - [Deployment](#deployment)
+  - [👥 Authors ](#-authors-)
+  - [🔮 Future Features](#-future-features)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [❓ FAQ (OPTIONAL) ](#-faq-optional-)
+  - [📝 License ](#-license-)
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
+   - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
@@ -135,8 +153,7 @@ You can deploy this project using:
 
 - GitHub: [@Grandi0z](https://github.com/Grandi0z)
 - Twitter: [@Joseph_LSK](https://twitter.com/Joseph_LSK)
-- LinkedIn: [Joeph L Kausi](https://linkedin.com/in/Joeph_l_Kausi)
-
+- LinkedIn: [Joseph L Kausi](https://linkedin.com/in/Joeph_l_Kausi)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

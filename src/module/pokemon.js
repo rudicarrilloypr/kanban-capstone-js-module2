@@ -1,3 +1,7 @@
+import BuildCommentPopUp from './buildCommentPopUp.js';
+
+const container = document.querySelector('.main');
+
 // Data from API
 async function getPokemonData() {
   const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=6');
@@ -16,7 +20,7 @@ async function getPokemonDetails(url) {
 async function displayPokemon() {
   const pokemonList = document.querySelector('#pokemon-list');
   const pokemonData = await getPokemonData();
-
+  let count = 0;
   pokemonData.forEach(async (pokemon) => {
     const details = await getPokemonDetails(pokemon.url);
 
@@ -42,13 +46,20 @@ async function displayPokemon() {
     // Buttons and Reservation Buttons
     const commentButton = document.createElement('button');
     commentButton.textContent = 'Comments';
-    const reservationButton = document.createElement('button');
-    reservationButton.textContent = 'Reservations';
+    commentButton.id = `idPokemon-${count}`;
 
-    pokemonElement.append(pokemonImage, pokemonTitleContainer, commentButton, reservationButton);
+    pokemonElement.append(pokemonImage, pokemonTitleContainer, commentButton);
     pokemonList.append(pokemonElement);
+    count += 1;
+
+    commentButton.addEventListener('click', (e) => {
+      const itemId = e.target.id;
+      const popUp = new BuildCommentPopUp(pokemon, details, { itemId });
+      container.appendChild(popUp.element.root);
+      pokemonList.classList.add('hidden');
+    });
   });
 }
 
-// Export fuctions
+// Export functions
 export { getPokemonData, getPokemonDetails, displayPokemon };
