@@ -47,10 +47,8 @@ async function displayPokemon() {
     const commentButton = document.createElement('button');
     commentButton.textContent = 'Comments';
     commentButton.id = `idPokemon-${count}`;
-    const reservationButton = document.createElement('button');
-    reservationButton.textContent = 'Reservations';
 
-    pokemonElement.append(pokemonImage, pokemonTitleContainer, commentButton, reservationButton);
+    pokemonElement.append(pokemonImage, pokemonTitleContainer, commentButton);
     pokemonList.append(pokemonElement);
     count += 1;
 

@@ -178,7 +178,6 @@ span {
 }
 
 .x-button {
-  position: fixed;
   align-self: flex-end;
   font-weight: 900;
   background: none;
