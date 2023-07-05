@@ -29,6 +29,10 @@ body {
   max-width: 100%;
 }
 
+.comment-pop-up div img {
+  width: 35vw;
+}
+
 .navbar .logo img {
   height: 6vw;
 }
@@ -36,6 +40,14 @@ body {
 .navbar nav ul {
   display: flex;
   list-style: none;
+}
+
+.comment-pop-up li {
+  list-style: none;
+}
+
+.comment-pop-up-details ul li {
+  width: 40%;
 }
 
 .navbar nav ul li {
@@ -146,15 +158,11 @@ footer {
 
 /* ---------- COMMENTS POP UP ---------- */
 
-li {
-  list-style: none;
-}
-
 span {
   font-weight: 900;
 }
 
-.comment-pop-up { 
+.comment-pop-up {
   width: 80%;
   margin: 1vh auto;
   display: flex;
@@ -204,10 +212,6 @@ span {
   height: 45vh;
 }
 
-.comment-pop-up div img {
-  width: 35vw;
-}
-
 .comment-pop-up h2 {
   font-size: 5vw;
   margin: 0.5rem;
@@ -224,16 +228,12 @@ span {
   flex-wrap: wrap;
 }
 
-.comment-pop-up-details ul li {
-  width: 40%;
-}
-
-#abilities-list li, 
+#abilities-list li,
 #stats-list li,
 #forms-list li,
 #weight-list li {
   font-size: 0.7rem;
-    width: fit-content;
+  width: fit-content;
 }
 
 .comment-pop-up-comments-number-container {
@@ -257,18 +257,16 @@ span {
 }
 
 .comment-pop-up_form_container form input,
-.comment-pop-up_form_container form textarea
- {
+.comment-pop-up_form_container form textarea {
   border: 0.2rem solid black;
   border-radius: 0.3rem;
 }
 
 .comment-pop-up_form_container form input:hover,
-.comment-pop-up_form_container form textarea:hover
- {
+.comment-pop-up_form_container form textarea:hover {
   border: 0.2rem solid #2b2828;
   border-radius: 0.3rem;
-  background: #f9f7f7;  
+  background: #f9f7f7;
 }
 
 .comment-pop-up_form_container form button {

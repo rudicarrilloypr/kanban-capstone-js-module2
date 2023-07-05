@@ -1,25 +1,27 @@
 const getComment = async (idPokemon) => {
-    const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/OpY2WiQJBmA3ZJO0cpiV/comments?item_id=${idPokemon}`)
+  const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/OpY2WiQJBmA3ZJO0cpiV/comments?item_id=${idPokemon}`)
     .catch((error) => new Error(error));
-    const comments = await response.json();
-    return comments;
-}
+  const comments = await response.json();
+  return comments;
+};
 
 const postComment = async (comment) => {
-    const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/OpY2WiQJBmA3ZJO0cpiV/comments', {
-      method: 'POST',
-      body: JSON.stringify(comment),
-      headers: {
-            'Content-type': 'application/json; charset=UTF-8',
-        },
-     })
+  const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/OpY2WiQJBmA3ZJO0cpiV/comments', {
+    method: 'POST',
+    body: JSON.stringify(
+      {
+        item_id: comment.itemId,
+        username: comment.userName,
+        comment: comment.comment,
+      },
+    ),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  })
     .catch((error) => new Error(error));
-    const msg = await response;
-    return msg;
-  };
+  const msg = await response;
+  return msg;
+};
 
-
-
-export {getComment, postComment}
-  
-    
+export { getComment, postComment };
