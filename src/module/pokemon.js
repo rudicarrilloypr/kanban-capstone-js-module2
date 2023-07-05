@@ -90,8 +90,6 @@ async function displayPokemon() {
         // Change the icon to empty
         likeIcon.classList.remove('fas');
         likeIcon.classList.add('far');
-        // Decrement the likes count
-        likesCount.textContent = Number(likesCount.textContent) - 1;
       }
     });
   });
