@@ -25,8 +25,8 @@ async function displayPokemon() {
   // Get the list of likes from the API
   const likesData = await getLikes();
 
-  let count = 0;
-  pokemonData.forEach(async (pokemon) => {
+  // Convert the forEach loop to a map loop that returns promises
+  const pokemonPromises = pokemonData.map(async (pokemon, index) => {
     const details = await getPokemonDetails(pokemon.url);
 
     const pokemonElement = document.createElement('div');
@@ -63,11 +63,9 @@ async function displayPokemon() {
     // Buttons and Reservation Buttons
     const commentButton = document.createElement('button');
     commentButton.textContent = 'Comments';
-    commentButton.id = `idPokemon-${count}`;
+    commentButton.id = `idPokemon-${index}`;
 
     pokemonElement.append(pokemonImage, pokemonTitleContainer, commentButton);
-    pokemonList.append(pokemonElement);
-    count += 1;
 
     commentButton.addEventListener('click', (e) => {
       const itemId = e.target.id;
@@ -92,7 +90,16 @@ async function displayPokemon() {
         likeIcon.classList.add('far');
       }
     });
+
+    // Return a promise that resolves when the Pokemon has been added to the DOM
+    return new Promise((resolve) => {
+      pokemonList.append(pokemonElement);
+      resolve();
+    });
   });
+
+  // Wait for all the Pokemon to be added to the DOM
+  await Promise.all(pokemonPromises);
 }
 
 // Export functions

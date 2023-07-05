@@ -1,5 +1,5 @@
 import './index.css';
 import { displayPokemon } from './module/pokemon.js';
+import updatePokemonCounter from './module/pokemonCounter.js';
 
-// Ahora puedes usar la función displayPokemon en tu index.js
-displayPokemon();
+displayPokemon().then(() => updatePokemonCounter());

@@ -25,8 +25,16 @@ body {
   z-index: 1000;
 }
 
+.main {
+  padding-top: 150px;  /* Ajusta este valor según sea necesario */
+}
+
 .pokemon-item img {
   max-width: 100%;
+}
+
+#pokemon-counter {
+  margin-bottom: 50px;
 }
 
 .comment-pop-up div img {
