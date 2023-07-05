@@ -42,7 +42,9 @@
   },
   "dependencies": {
     "babel-loader": "^9.1.2",
+    "crypto-browserify": "^3.12.0",
     "lodash": "^4.17.21",
+    "node-polyfill-webpack-plugin": "^2.0.1",
     "webpack": "^5.88.1",
     "webpack-cli": "^5.1.4"
   }
