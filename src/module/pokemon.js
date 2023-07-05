@@ -45,13 +45,20 @@ async function displayPokemon() {
     const likeIcon = document.createElement('i');
     likeIcon.classList.add('like-icon', 'far', 'fa-heart');
 
+    // Create a span to hold the likes count
+    const likesCount = document.createElement('span');
+    likesCount.classList.add('likes-count');
+
     // Check if this pokemon is in the list of likes
-    if (likesData.some((likeObj) => likeObj.item_id === pokemon.name)) {
+    const likeObj = likesData.find((obj) => obj.item_id === pokemon.name);
+    if (likeObj) {
       likeIcon.classList.remove('far');
       likeIcon.classList.add('fas'); // filled heart
+      likesCount.textContent = likeObj.likes; // update likes count
     }
 
-    pokemonTitleContainer.append(pokemonTitle, likeIcon);
+    // eslint-disable-next-line max-len
+    pokemonTitleContainer.append(pokemonTitle, likeIcon, likesCount); // append likes count to container
 
     // Buttons and Reservation Buttons
     const commentButton = document.createElement('button');
@@ -77,10 +84,14 @@ async function displayPokemon() {
         // Change the icon to filled
         likeIcon.classList.remove('far');
         likeIcon.classList.add('fas');
+        // Increment the likes count
+        likesCount.textContent = Number(likesCount.textContent) + 1;
       } else {
         // Change the icon to empty
         likeIcon.classList.remove('fas');
         likeIcon.classList.add('far');
+        // Decrement the likes count
+        likesCount.textContent = Number(likesCount.textContent) - 1;
       }
     });
   });
