@@ -1,4 +1,5 @@
 import BuildCommentPopUp from './buildCommentPopUp.js';
+import { postLike, getLikes } from './involvementApi.js';
 
 const container = document.querySelector('.main');
 
@@ -20,6 +21,10 @@ async function getPokemonDetails(url) {
 async function displayPokemon() {
   const pokemonList = document.querySelector('#pokemon-list');
   const pokemonData = await getPokemonData();
+
+  // Get the list of likes from the API
+  const likesData = await getLikes();
+
   let count = 0;
   pokemonData.forEach(async (pokemon) => {
     const details = await getPokemonDetails(pokemon.url);
@@ -37,9 +42,14 @@ async function displayPokemon() {
     pokemonImage.src = details.sprites.front_default;
 
     // Like Button
-    const likeIcon = document.createElement('span');
-    likeIcon.textContent = '❤️';
-    likeIcon.classList.add('like-icon');
+    const likeIcon = document.createElement('i');
+    likeIcon.classList.add('like-icon', 'far', 'fa-heart');
+
+    // Check if this pokemon is in the list of likes
+    if (likesData.some((likeObj) => likeObj.item_id === pokemon.name)) {
+      likeIcon.classList.remove('far');
+      likeIcon.classList.add('fas'); // filled heart
+    }
 
     pokemonTitleContainer.append(pokemonTitle, likeIcon);
 
@@ -57,6 +67,21 @@ async function displayPokemon() {
       const popUp = new BuildCommentPopUp(pokemon, details, { itemId });
       container.appendChild(popUp.element.root);
       pokemonList.classList.add('hidden');
+    });
+
+    // Event listener for the like button
+    likeIcon.addEventListener('click', async () => {
+      if (likeIcon.classList.contains('far')) {
+        // Post the like to the API
+        await postLike(pokemon.name);
+        // Change the icon to filled
+        likeIcon.classList.remove('far');
+        likeIcon.classList.add('fas');
+      } else {
+        // Change the icon to empty
+        likeIcon.classList.remove('fas');
+        likeIcon.classList.add('far');
+      }
     });
   });
 }
