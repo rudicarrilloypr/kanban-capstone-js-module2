@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1688604297321" clover="3.2.0">
-  <project timestamp="1688604297321" name="All files">
+<coverage generated="1688610281886" clover="3.2.0">
+  <project timestamp="1688610281886" name="All files">
     <metrics statements="158" coveredstatements="17" conditionals="12" coveredconditionals="2" methods="29" coveredmethods="2" elements="199" coveredelements="21" complexity="0" loc="158" ncloc="158" packages="1" files="6" classes="6"/>
     <file name="buildCommentPopUp.js" path="/Users/rudicarrillo/Documentos/GitHub/CAPSTONE/Module 2/kanban-capstone-js-module2/src/module/buildCommentPopUp.js">
       <metrics statements="67" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="0"/>
