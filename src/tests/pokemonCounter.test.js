@@ -179,4 +179,3 @@ describe('comments counter function', () => {
     expect(result).toBeInstanceOf(Promise);
   });
 });
-
