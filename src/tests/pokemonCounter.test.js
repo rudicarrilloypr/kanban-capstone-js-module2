@@ -1,4 +1,6 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { JSDOM } from 'jsdom';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import fetch from 'node-fetch';
 import updatePokemonCounter from '../module/pokemonCounter.js';
 

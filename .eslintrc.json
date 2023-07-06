@@ -13,7 +13,6 @@
     "airbnb-base"
   ],
   "plugins": [
-    "jsdom"
   ],
   "rules": {
     "no-shadow": "off",
@@ -30,6 +29,7 @@
   },
   "ignorePatterns": [
     "dist/",
-    "build/"
+    "build/",
+    "coverage/"
   ]
 }
