@@ -66,7 +66,7 @@ async function displayPokemon() {
     commentButton.id = `idPokemon-${index}`;
 
     pokemonElement.append(pokemonImage, pokemonTitleContainer, commentButton);
-
+    
     commentButton.addEventListener('click', (e) => {
       const itemId = e.target.id;
       const popUp = new BuildCommentPopUp(pokemon, details, { itemId });
