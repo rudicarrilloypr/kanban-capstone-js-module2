@@ -8,22 +8,22 @@ export default class BuildCommentPopUp {
 
     this.element = {};
     this.element.root = BuildCommentPopUp.createRoot();
-
+    //pokemon image
     this.element.image = this.element.root.querySelector('#image-pokemon');
     this.element.image.src = details.sprites.front_default;
-
+    //pokemon name, the title on the pop-up
     this.element.pokemonName = this.element.root.querySelector('#pokemon-name');
     this.element.pokemonName.innerText = pokemon.name;
-
+    //!List of Pokemon's Features
     const pokemonAbilities = details.abilities;
-    // because we don't know the exact number of abilities of each pokemon
+    // 1) abilities : Because we don't know the exact number of abilities of each pokemon
     this.element.abilitiesList = this.element.root.querySelector('#abilities-list');
     pokemonAbilities.forEach((ability) => {
       const itemAbility = document.createElement('li');
       itemAbility.innerText = ability.ability.name;
       this.element.abilitiesList.appendChild(itemAbility);
     });
-    // forms
+    // 2) Forms
     this.element.formList = this.element.root.querySelector('#forms-list');
     const pokemonForm = details.forms;
     pokemonForm.forEach((form) => {
@@ -31,7 +31,7 @@ export default class BuildCommentPopUp {
       itemForm.innerText = form.name;
       this.element.formList.appendChild(itemForm);
     });
-    // stats
+    // 3) Stats
     this.element.statsList = this.element.root.querySelector('#stats-list');
     const pokemonStats = details.stats;
     pokemonStats.forEach((stat) => {
@@ -40,48 +40,49 @@ export default class BuildCommentPopUp {
       this.element.statsList.appendChild(itemStat);
     });
 
-    // weight
+    // 4) Weight
     this.element.weightList = this.element.root.querySelector('#weight-list');
     const itemWeight = document.createElement('li');
     itemWeight.innerText = details.weight;
     this.element.weightList.appendChild(itemWeight);
-
+    //!Comment list
     this.element.commentList = this.element.root.querySelector('#comment-list');
     this.element.numberOfComments = this.element.root.querySelector('#commentCount');
     BuildCommentPopUp.getComments(
-      features.itemId,
+      features.itemId, //Use a obj as parameter in case we can need others parameters in futur
       this.element.commentList,
       this.element.numberOfComments,
     );
-
+    //!Form
     this.element.form = this.element.root.querySelector('form');
     this.element.userName = this.element.root.querySelector('#comment-pop-up_input_name');
     this.element.comment = this.element.root.querySelector('#comment-pop-up_textarea_content');
     this.element.submitButton = this.element.root.querySelector('#comment-pop-up_submit');
+    //On submit
     this.element.submitButton.addEventListener('click', (e) => {
       e.preventDefault();
       const userName = this.element.userName.value.trim();
       const commentContent = this.element.comment.value.trim();
       const comment = new Comment(features.itemId, userName, commentContent);
       BuildCommentPopUp.saveComment(comment);
-      this.element.commentList.innerText = '';
+      this.element.commentList.innerText = ''//Empty the comments container
       this.element.form.reset();
-      setTimeout(() => {
-        BuildCommentPopUp.getComments(
-          features.itemId,
+      setTimeout(() => {//Waiting as the POST method is finishing to save the new comment
+        BuildCommentPopUp.getComments(//before do GET it.
+          features.itemId,//It's should be better to use a callback function lol
           this.element.commentList,
           this.element.numberOfComments,
         );
       }, 1000);
     });
-
+    //!Call of the x-button
     this.element.xButton = this.element.root.querySelector('.x-button');
     this.element.xButton.addEventListener('click', () => {
       this.element.root.parentElement.removeChild(this.element.root);
       hideOrDisplayHeaderAndFooter();
     });
   }
-
+    //!Create the layout of the pop-up
     static createRoot = () => {
       const range = document.createRange();
       range.selectNode(document.body);
@@ -133,14 +134,14 @@ export default class BuildCommentPopUp {
     </div>
             `).children[0];
     }
-
+    //Did this because we need a async function to use the await keyword
     static saveComment = async (comment) => {
       const message = await postComment(comment);
       return message;
     }
 
     static getComments = async (idPokemon, parent, count) => {
-      try {
+      try {//It throw error when the pokemon do not have any comment
         const comments = await getComment(idPokemon);
         count.innerText = comments.length;
         comments.forEach((comment) => {
