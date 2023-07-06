@@ -12,9 +12,10 @@
 
 - [� Table of Contents](#-table-of-contents)
 - [📖  Pokemon App ](#--pokemon-app-)
-  - [🛠 Built With ](#-built-with-)
+- [🛠 Built With ](#-built-with-)
    - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+ - [🚀 Live Demo](#live-demo)
   - [💻 Getting Started ](#-getting-started-)
    - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -24,6 +25,7 @@
     - [Deployment](#deployment)
   - [👥 Authors ](#-authors-)
   - [🔮 Future Features](#-future-features)
+  - [👀 Sneak Peak Process](#sneak-peak)
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
   - [❓ FAQ (OPTIONAL) ](#-faq-optional-)
@@ -80,8 +82,17 @@
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
-- [X] **home page showing a list of items that you can "like.**
+- [X] **Home page showing a list of items that you can "like".**
 - [X] **When the page loads, the webapp retrieves data from the Pokemon API and shows the list of Pokemon types on screen**
+- [X] **Add comments feature**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+[Click here]() to see the project's deployment on GitHub pages.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -160,9 +171,14 @@ You can deploy this project using:
 <!--- Future Features ---->
 
 ## <a href="#future-features"></a>🔮 Future Features
-- Pop-up with selected Pokemon information
+- Style adapted as a Pokedex Interface
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!--- Sneak Peak --->
+
+## 👀  Sneak Peak Process <a name="sneak-peak"></a>
+5 minutes [video]() presenting key features by the authors.
 
 <!-- CONTRIBUTING -->
 
