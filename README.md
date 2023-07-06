@@ -92,7 +92,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[Click here]() to see the project's deployment on GitHub pages.
+[Click here](https://gleeful-kitsune-465a87.netlify.app/) to see the project's deployment on GitHub pages.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
