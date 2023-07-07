@@ -70,8 +70,8 @@ body {
 }
 
 #comment-list li {
-  font-size: 0.8rem;
-  font-family: cursive;
+  font-size: 0.7rem;
+  color: rgb(36, 94, 180);
 }
 
 .navbar nav ul li a {
@@ -302,13 +302,15 @@ span {
 #weight-list li {
   font-size: 0.78rem;
   width: fit-content;
-  font-family: cursive;
+  color: rgb(36, 94, 180);
 }
 
 .comment-pop-up-comments-number-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0.5rem;
+  font-size: 1.5rem;
 }
 
 #commentCount {
