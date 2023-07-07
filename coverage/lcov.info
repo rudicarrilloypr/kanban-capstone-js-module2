@@ -1,5 +1,5 @@
 TN:
-SF:src/module/buildCommentPopUp.js
+SF:src\module\buildCommentPopUp.js
 FN:6,(anonymous_0)
 FN:21,(anonymous_1)
 FN:29,(anonymous_2)
@@ -97,7 +97,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:src/module/comment.js
+SF:src\module\comment.js
 FN:2,(anonymous_0)
 FNF:1
 FNH:0
@@ -111,7 +111,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:src/module/involvementApi.js
+SF:src\module\involvementApi.js
 FN:1,(anonymous_0)
 FN:3,(anonymous_1)
 FN:8,(anonymous_2)
@@ -165,7 +165,7 @@ BRF:6
 BRH:0
 end_of_record
 TN:
-SF:src/module/pokemon.js
+SF:src\module\pokemon.js
 FN:7,getPokemonData
 FN:14,getPokemonDetails
 FN:21,displayPokemon
@@ -245,7 +245,7 @@ BRF:4
 BRH:0
 end_of_record
 TN:
-SF:src/module/pokemonCounter.js
+SF:src\module\pokemonCounter.js
 FN:3,(anonymous_0)
 FNF:1
 FNH:1
@@ -263,7 +263,7 @@ BRF:2
 BRH:2
 end_of_record
 TN:
-SF:src/module/viewFunctions.js
+SF:src\module\viewFunctions.js
 FN:1,(anonymous_0)
 FNF:1
 FNH:0

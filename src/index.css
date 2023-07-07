@@ -69,6 +69,11 @@ body {
   margin: 0 1vw;
 }
 
+#comment-list li {
+  font-size: 0.8rem;
+  font-family: cursive;
+}
+
 .navbar nav ul li a {
   text-decoration: none;
   color: inherit;
@@ -295,8 +300,9 @@ span {
 #stats-list li,
 #forms-list li,
 #weight-list li {
-  font-size: 0.7rem;
+  font-size: 0.78rem;
   width: fit-content;
+  font-family: cursive;
 }
 
 .comment-pop-up-comments-number-container {
