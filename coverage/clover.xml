@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
+
 <coverage generated="1688668566620" clover="3.2.0">
   <project timestamp="1688668566620" name="All files">
-=======
-<coverage generated="1688668857857" clover="3.2.0">
-  <project timestamp="1688668857857" name="All files">
->>>>>>> 21f9391a6f59f14841180f70e9571af2c836a2b7
     <metrics statements="158" coveredstatements="17" conditionals="12" coveredconditionals="2" methods="29" coveredmethods="2" elements="199" coveredelements="21" complexity="0" loc="158" ncloc="158" packages="1" files="6" classes="6"/>
     <file name="buildCommentPopUp.js" path="C:\Users\Joseph\Documents\Microverse\Module_2_v3\Week_5\kanban-capstone-js-module2\src\module\buildCommentPopUp.js">
       <metrics statements="67" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="0"/>
