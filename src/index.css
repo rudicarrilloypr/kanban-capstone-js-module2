@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 
 * {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Press Start 2P', sans-serif;
   font-size: 2vw;
   font-weight: 600;
 }
@@ -10,6 +10,7 @@ body {
   box-sizing: border-box;
   padding: 0 4vw;
   margin: 0;
+  background-color: #fff;
 }
 
 .navbar {
@@ -18,15 +19,21 @@ body {
   justify-content: center;
   width: 90vw;
   padding: 0 1vw;
-  position: fixed;
-  background-color: #fff;
+  position: sticky;
+  background-color: #f2d18d;
   height: 7.5vw;
   top: 0;
   z-index: 1000;
+  border: 2px solid #000;
+  box-shadow:
+    3px 3px 0 2px #000,
+    -3px -3px 0 2px #c0c0c0,
+    3px 3px 5px 4px #a9a9a9 inset,
+    -3px -3px 5px 4px #fff inset;
 }
 
 .main {
-  padding-top: 150px;  /* Ajusta este valor según sea necesario */
+  padding-top: 10px;  /* Ajusta este valor según sea necesario */
 }
 
 .pokemon-item img {
@@ -60,6 +67,11 @@ body {
 
 .navbar nav ul li {
   margin: 0 1vw;
+}
+
+#comment-list li {
+  font-size: 0.8rem;
+  font-family: cursive;
 }
 
 .navbar nav ul li a {
@@ -102,18 +114,27 @@ footer {
   height: 5vw;
   display: flex;
   align-items: center;
-  border: black solid 0.5vw;
+  border: 2px solid #000;
+  box-shadow:
+    3px 3px 0 2px #000,
+    -3px -3px 0 2px #c0c0c0,
+    3px 3px 5px 4px #a9a9a9 inset,
+    -3px -3px 5px 4px #fff inset;
   padding: 0 1vw;
+  position: sticky;
+  background-color: #fff;
+  bottom: 0;
+  z-index: 1000;
 }
 
 .footer {
+  font-size: 1vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 90vw;
-  border: black solid 0.5vw;
   padding: 0 1vw;
-  position: fixed;
+  position: relative;
   background-color: #fff;
   height: 5vw;
   bottom: 0;
@@ -123,8 +144,9 @@ footer {
 /* ---------- POKEMON LIST ---------- */
 
 .pokemon-list {
+  flex-shrink: 0;
   display: flex;
-  margin-top: 5vw;
+  margin-top: 0.1vw;
   margin-bottom: 5vw;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -137,29 +159,72 @@ footer {
   flex-basis: calc(30% - 2em);
   margin: 1em;
   padding: 2em;
-  border: 1px solid black;
   text-align: center;
   box-sizing: border-box;
   height: 50vh;
+  width: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
   justify-content: space-between; /* Added to space out the elements */
+  background-color: #fff;
+  border: 2px solid #000;
+  box-shadow:
+    3px 3px 0 2px #000,
+    -3px -3px 0 2px #c0c0c0,
+    3px 3px 5px 4px #a9a9a9 inset,
+    -3px -3px 5px 4px #fff inset;
 }
 
-.comment-button,
-.reservation-button {
-  margin: 0.5em 0;
+.comment-button {
+  padding: 1em;
+  background-color: #fff;
+  border: 2px solid #000;
+  box-shadow:
+    3px 3px 0 2px #000,
+    -3px -3px 0 2px #c0c0c0,
+    3px 3px 5px 4px #a9a9a9 inset,
+    -3px -3px 5px 4px #fff inset;
+  transition: 0.3s;
+  text-decoration: none;
+  text-align: center;
+}
+
+.comment-button:hover {
+  background-color: #c0c0c0;
+}
+
+.comment-button:active {
+  box-shadow:
+    -3px -3px 0 2px #000,
+    3px 3px 0 2px #c0c0c0,
+    -3px -3px 5px 4px #a9a9a9 inset,
+    3px 3px 5px 4px #fff inset;
+}
+
+.comment-button:active,
+.reservation-button:active {
+  border-style: inset;
 }
 
 .like-icon {
-  font-size: 2em;
+  font-size: 1em;
+  position: absolute;
+  top: 14px;
+  right: 50px;
+}
+
+.likes-count {
+  font-size: 0.5em;
+  position: absolute;
+  top: 10px; /* Ajusta este valor según sea necesario */
+  right: 10px; /* Ajusta este valor según sea necesario */
 }
 
 .title-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
 }
@@ -177,7 +242,7 @@ span {
   flex-direction: column;
   padding: 1vh 3vw;
   align-items: center;
-  border: 0.3rem solid black;
+  border: 0.3rem solid #000;
   border-radius: 0.9rem;
 }
 
@@ -194,8 +259,8 @@ span {
 }
 
 .pop-up-buttons:hover {
-  background-color: black;
-  color: white;
+  background-color: #000;
+  color: #fff;
   padding-right: 1rem;
   padding-left: 0.5rem;
 }
@@ -212,7 +277,7 @@ span {
 }
 
 .pop-up-buttons:focus {
-  color: red;
+  color: #f00;
 }
 
 .comment-pop-up h2 {
@@ -235,8 +300,9 @@ span {
 #stats-list li,
 #forms-list li,
 #weight-list li {
-  font-size: 0.7rem;
+  font-size: 0.78rem;
   width: fit-content;
+  font-family: cursive;
 }
 
 .comment-pop-up-comments-number-container {
@@ -261,7 +327,7 @@ span {
 
 .comment-pop-up_form_container form input,
 .comment-pop-up_form_container form textarea {
-  border: 0.2rem solid black;
+  border: 0.2rem solid #000;
   border-radius: 0.3rem;
 }
 
