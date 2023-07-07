@@ -92,7 +92,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[Click here]() to see the project's deployment on GitHub pages.
+[Click here](https://deploy-preview-33--gleeful-kitsune-465a87.netlify.app/) to see the project's deployment.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -178,7 +178,9 @@ You can deploy this project using:
 <!--- Sneak Peak --->
 
 ## 👀  Sneak Peak Process <a name="sneak-peak"></a>
-5 minutes [video]() presenting key features by the authors.
+5 minutes [video](https://www.loom.com/share/49ded6a2d3064a42bddd23d821b09d0d?sid=f09d25b4-23d3-4b45-8bea-c50a67c00057) presenting key features by the authors.
+
+https://www.loom.com/share/49ded6a2d3064a42bddd23d821b09d0d?sid=f09d25b4-23d3-4b45-8bea-c50a67c00057
 
 <!-- CONTRIBUTING -->
 
